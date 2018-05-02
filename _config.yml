@@ -1,0 +1,50 @@
+# Basic
+title: Fin
+subtitle: 笔记
+#welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
+#description: 个人学习笔记
+creator: <a href="http://onev.cat">@onevcat</a>
+
+url: "http://uusing.com"
+
+permalink: /:year/:month/:title/
+
+# Format
+highlighter: rouge
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: slate
+
+# The blog button should not be removed.
+blog_button:
+    title: 博客
+    description: Visit blog
+
+# Navigation buttons in the front page.
+nav:
+    # - {title: Another Button, description: A button, url: 'http://example.com'}
+    - {title: Bark, description: V2ex-Swift, url: 'https://github.com/Finb/Bark/releases'}
+    - {title: V2ex-Swift, description: V2ex-Swift, url: 'https://github.com/Finb/V2ex-Swift'}
+    
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
+
+# Comment
+comment:
+    disqus: Fin
+    # duoshuo: 
+    
+# Social
+social:
+    github: Finb
+    twitter: finuuid
+    # gplus: 107108267983477358170
+    mail: heyfiniks@gmail.com
+
+# Google Analytics
+ga:
+    id: UA-116607515-1
+    host: uusing.com
