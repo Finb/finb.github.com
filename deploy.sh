@@ -1,1 +1,1 @@
-jekyll build | scp -P 202 -r  ~/Documents/project/Fin/_site/*  root@uusing.com:/Fin/
+jekyll build ; scp -P 202 -r  ~/Documents/project/Fin/_site/*  root@uusing.com:/Fin/; git push origin master
