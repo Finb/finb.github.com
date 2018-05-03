@@ -1,1 +1,3 @@
-jekyll build ; scp -P 202 -r  ~/Documents/project/Fin/_site/*  root@uusing.com:/Fin/; git push origin master
+git add .;
+git ci -m"update";
+git push origin master;
