@@ -5,7 +5,7 @@ subtitle: 笔记
 # description:
 creator: <a href="http://onev.cat">@onevcat</a>
 
-url: "http://uusing.com"
+url: "http://day.app"
 
 permalink: /:year/:month/:title/
 
@@ -47,4 +47,4 @@ social:
 # Google Analytics
 ga:
     id: UA-116607515-1
-    host: uusing.com
+    host: day.app
