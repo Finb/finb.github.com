@@ -6,13 +6,13 @@ comments: true
 categories: iOS RunLoop
 ---
 >
->学习是看这篇博客
+学习是看这篇博客
 
-><a target='_blank' href='http://blog.ibireme.com/2015/05/18/runloop/ '>http://blog.ibireme.com/2015/05/18/runloop/ </a>
+<a target='_blank' href='http://blog.ibireme.com/2015/05/18/runloop/ '>http://blog.ibireme.com/2015/05/18/runloop/ </a>
 
->讲的还算清楚易懂
+讲的还算清楚易懂
 
->和这篇博客类似的还有 <a target='_blank' href='http://v.youku.com/v_show/id_XODgxODkzODI0.html'>孙源的线下iOS视频 RunLoop 篇</a>。其实大致是一样的
+和这篇博客类似的还有 <a target='_blank' href='http://v.youku.com/v_show/id_XODgxODkzODI0.html'>孙源的线下iOS视频 RunLoop 篇</a>。其实大致是一样的
 
 看博文 看视频两个选一个看看。。我是两个都看了
 
