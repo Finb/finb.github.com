@@ -26,7 +26,6 @@ categories:
 当然是不会的，你可以用你的监控工具监控软件的网络请求。
 软件只会请求 [v2ex.com](v2ex.com)
 与 Twitter旗下的 [crashlytics.com](crashlytics.com)
-`使用内置浏览器访问第三方站点的请求无法控制，如发生网络劫持、密码泄露等均与此APP无关`
 并且，你可以[下载源代码](https://github.com/Finb/V2ex-Swift)自行编译使用
 
 #### 4. 为什么没有发帖与搜索
