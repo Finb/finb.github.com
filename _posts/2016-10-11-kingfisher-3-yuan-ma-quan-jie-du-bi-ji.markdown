@@ -8,7 +8,7 @@ categories:
 
 个人笔记，不适合阅读
 
-##Kingfisher.swift
+## Kingfisher.swift
 
 泛型Base接受任何类型，实例化Kingfisher后将Base的实例保存在 base字段里，
 {% highlight Swift %}

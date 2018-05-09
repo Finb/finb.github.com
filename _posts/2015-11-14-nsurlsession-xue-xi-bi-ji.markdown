@@ -6,7 +6,7 @@ comments: true
 categories: iOS NSURLSession
 ---
 
-###NSURLSession
+### NSURLSession
 > *NSURLSession是iOS7中新的网络接口。程序在前台时，NSURLSession与NSURLConnection可以互相替代工作。*
 
 **功能**

@@ -18,7 +18,7 @@ categories: iOS RunLoop
 
 这里我主要是分享一点用例，
 <!--more-->
-###教程中提到的 AFNetworking 使用RunLoop
+### 教程中提到的 AFNetworking 使用RunLoop
 
 代码主要功能是让`线程常驻`，当有任务时，丢给这个线程就行。
 
@@ -28,13 +28,13 @@ categories: iOS RunLoop
 执行完后任务后  ，又回到Waiting 状态
 <br/>
 
-###这里我自己写了一个RunLoop用法例子，
+### 这里我自己写了一个RunLoop用法例子，
 
 具体是 当程序空闲时，我们去执行一些代码。 
 
 可能场景是某个tableView停止滑动后 ，APP是空闲状态。此时我们可以去执行一些计算还没有呈现出来的cell的高度，当tableView再次滑动时，我们就不需要额外计算Cell的高度了，让滑动更流畅。
 
-####实现之前，首先有一个知识点要清楚，
+#### 实现之前，首先有一个知识点要清楚，
 就是RunLoop的`状态变化` ，我们要知道RunLoop何时变成空闲，才能在空闲时执行代码。
 
 教程里有非常详细的描述，但我还是想用一段代码来测试一下
@@ -123,7 +123,7 @@ kCFRunLoopBeforeWaiting
 
 ----
 
-#总结 如何在RunLoop空闲时执行代码
+# 总结 如何在RunLoop空闲时执行代码
 1. 监听RunLoop 的RunLoopDefaultMode  的 kCFRunLoopBeforeWaiting状态
 2. 收到通知时，去执行代码。
 3. 任务完成后，取消监听。

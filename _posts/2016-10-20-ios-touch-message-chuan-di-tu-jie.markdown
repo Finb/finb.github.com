@@ -17,7 +17,7 @@ categories:
 第二步：系统将Touch message 发送给响应链 顶部的 视图控件，顶部视图控件这个时候就会调用Touch相关的四个方法中的某一个。之后进入自定义Touch message转发  
 第三步：自定义Touch message转发可以继承UIResponser的四个Touch函数做转发。
 
-###举例说明
+### 举例说明
 
 aView 有一个子视图 bView ,aView 有 一个Tap手势。  
 点击bView,   
