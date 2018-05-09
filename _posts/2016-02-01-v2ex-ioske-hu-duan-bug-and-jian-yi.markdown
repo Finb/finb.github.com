@@ -7,7 +7,7 @@ categories:
 ---
 
 你可以给我写邮件提出软件的BUG或者建议，每条我都会回复并处理。
-我的邮箱是 heyfiniks@gmail.com
+我的邮箱是 <heyfiniks@gmail.com>
 
 
 下面列出一些常见的问题与答复
