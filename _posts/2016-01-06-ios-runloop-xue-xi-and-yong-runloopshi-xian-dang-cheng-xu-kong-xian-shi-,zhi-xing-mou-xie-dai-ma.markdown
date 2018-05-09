@@ -5,10 +5,8 @@ date: 2016-01-06 15:33:25 +0800
 comments: true
 categories: iOS RunLoop
 ---
->
-学习是看这篇博客
 
-<a target='_blank' href='http://blog.ibireme.com/2015/05/18/runloop/ '>http://blog.ibireme.com/2015/05/18/runloop/ </a>
+学习是看<a target='_blank' href='http://blog.ibireme.com/2015/05/18/runloop/ '>这篇博客</a>
 
 讲的还算清楚易懂
 
