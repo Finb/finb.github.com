@@ -6,8 +6,9 @@ comments: true
 categories: 
 ---
 
-你可以给我写邮件或在当前页面评论 (Disqus) 提出软件的BUG或者建议, 每条我都会回复并处理,
-我的邮箱是 <to@day.app> 。
+你可以给我写邮件或在当前页面评论处反馈问题、提出建议。  
+邮箱：<to@day.app> 。  
+评论：<a href='#disqus_thread'>评论 (Disqus，需翻墙)</a>
 
 
 
