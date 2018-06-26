@@ -11,6 +11,7 @@ tags:
 ---
 
 如果你的数据特别敏感，请将Bark部署到私人服务器。<br>所有的数据将只在 你的手机 <-> 你的服务器 <-> Apple推送服务器 传输。
+
 部署:
 
 1. 根据平台下载可执行文件:<br> <a href='https://github.com/Finb/Bark/releases'>https://github.com/Finb/Bark/releases</a>
