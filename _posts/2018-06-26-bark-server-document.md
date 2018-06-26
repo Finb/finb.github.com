@@ -18,7 +18,8 @@ tags:
 
 2. 运行
 ```
-./Bark -ip=0.0.0.0 -port=80 
+chmod +x Bark_linux_amd64
+./Bark_linux_amd64 -ip=0.0.0.0 -port=80 
 ```
 3. 在APP端填入你的服务器IP或域名
 
