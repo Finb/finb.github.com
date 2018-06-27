@@ -18,14 +18,19 @@ tags:
 
 2. 运行
 ```
-chmod +x Bark_linux_amd64
 ./Bark_linux_amd64 -ip=0.0.0.0 -port=80 
+```
+你可能需要
+```
+chmod +x Bark_linux_amd64
 ```
 3. 在APP端填入你的服务器IP或域名
 
 
-注意:
+其他:
 
 1. APP端负责将<a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622958-application">DeviceToken</a>发送到服务端。 <br>服务端收到一个推送请求后，将发送推送给Apple服务器。然后手机收到推送
 
-2. 服务端代码:<a href='https://github.com/Finb/go-tools/blob/master/Bark.go'>https://github.com/Finb/go-tools/blob/master/Bark.go</a><br>
+2. 服务端代码: <a href='https://github.com/Finb/go-tools/blob/master/Bark.go'>https://github.com/Finb/go-tools/blob/master/Bark.go</a><br>
+
+3. App代码: <a href="https://github.com/Finb/Bark">https://github.com/Finb/Bark</a>
