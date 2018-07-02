@@ -26,7 +26,7 @@ chmod +x Bark_linux_amd64
 ```
 3. 测试
 ```
-curl https://api.day.app/ping
+curl http://0.0.0.0/ping
 ```
 4. 在APP端填入你的服务器IP或域名
 
