@@ -37,7 +37,7 @@ curl http://0.0.0.0/ping
 * 当你需要集成Bark到自己的系统或重新实现后端代码时可能需要推送证书<br>
 证书密码: bp<br>
 有效期到: 2019-03-08<br>
- <a href="https://github.com/Finb/Bark/releases/download/1.0.0/cert-20190308.p12">https://github.com/Finb/Bark/releases/download/1.0.0/cert-20190308.p12</a>
+ <a href="https://github.com/Finb/Bark/releases/download/1.0.0/cert-20190308.p12">cert-20190308.p12</a>
  
 
 #### 其他:
