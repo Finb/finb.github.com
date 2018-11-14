@@ -14,12 +14,6 @@ categories:
 
 下面列出一些常见的问题与答复
 
-#### 0. iPhone Xs / Max 适配
-请使用Testflight更新适配版本 （新版暂时没有上架App Store）<br>
-TestFlight 邀请链接  <a href="https://testflight.apple.com/join/HEMrBRbv" target="_blank">https://testflight.apple.com/join/HEMrBRbv</a>
-
-在你刷新帖子列表时会判断需不需要签到，如果需要，则会自动签到，成功后会有一个提示。
-
 #### 1. 签到功能在哪
 
 在你刷新帖子列表时会判断需不需要签到，如果需要，则会自动签到，成功后会有一个提示。
