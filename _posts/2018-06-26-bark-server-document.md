@@ -10,6 +10,11 @@ multilingual: false
 tags: 
 ---
 
+#### Bark是啥？
+
+<a href="https://www.v2ex.com/t/467407">https://www.v2ex.com/t/467407</a>
+
+#### 隐私保护:
 如果你的数据特别敏感，请将Bark部署到私人服务器。<br>所有的数据将只在 你的手机、你的服务器、Apple推送服务器之间传输。
 
 #### 部署:
