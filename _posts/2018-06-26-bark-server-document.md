@@ -14,6 +14,9 @@ tags:
 
 <a href="https://www.v2ex.com/t/467407">https://www.v2ex.com/t/467407</a>
 
+### 后端程序更新
+<span style="color:#BF1827;">1月30日之前</span>下载的后端程序，需要在<span style="color:#BF1827;">4月7日</span>之前更新。因苹果推送证书过期将导致<span style="color:#BF1827;">推送失败</span>
+
 #### 隐私保护:
 如果你的数据特别敏感，请将Bark部署到私人服务器。<br>所有的数据将只在 你的手机、你的服务器、Apple推送服务器之间传输。
 
@@ -41,9 +44,9 @@ curl http://0.0.0.0/ping
 
 * 当你需要集成Bark到自己的系统或重新实现后端代码时可能需要推送证书<br>
 证书密码: bp<br>
-有效期到: 2019-03-08<br>
- <a href="https://github.com/Finb/Bark/releases/download/1.0.0/cert-20190308.p12">cert-20190308.p12</a>
- 
+有效期到: 2020-02-29<br>
+<a href="https://github.com/Finb/Bark/releases/download/1.0.0/cert-20200229.p12">cert-20200229.p12</a>
+* 请及时更新推送证书，证书过期前两个月会在当前页面更新新的有效证书
 
 #### 其他:
 
