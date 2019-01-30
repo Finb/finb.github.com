@@ -15,7 +15,7 @@ tags:
 <a href="https://www.v2ex.com/t/467407">https://www.v2ex.com/t/467407</a>
 
 ### 后端程序更新
-<span style="color:#BF1827;">1月30日之前</span>下载的后端程序，需要在<span style="color:#BF1827;">4月7日</span>之前更新。因苹果推送证书过期将导致<span style="color:#BF1827;">推送失败</span>
+<span style="color:#BF1827;">2019年1月30日之前</span>下载的后端程序，需要在<span style="color:#BF1827;">2019年4月7日</span>之前更新。因苹果推送证书过期将导致<span style="color:#BF1827;">推送失败</span>
 
 #### 隐私保护:
 如果你的数据特别敏感，请将Bark部署到私人服务器。<br>所有的数据将只在 你的手机、你的服务器、Apple推送服务器之间传输。
