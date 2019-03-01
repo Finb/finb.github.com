@@ -24,7 +24,7 @@ tags:
 
 - Docker
 ```
-docker run -dt --name bark -p 8080:8080 finab/bark-server:v1.0.0
+docker run -dt --name bark -p 8080:8080 -v `pwd`/bark-data:/data finab/bark-server
 ```
 - 手动安装
 
