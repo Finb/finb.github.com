@@ -10,6 +10,9 @@ multilingual: false
 tags: 
 ---
 
+<a href="https://github.com/Finb/bark-server/blob/master/README.md">For English</a>
+<br/>
+
 ### Bark是啥？
 
 <a href="https://www.v2ex.com/t/467407">https://www.v2ex.com/t/467407</a>
@@ -26,11 +29,13 @@ tags:
 ```
 docker run -dt --name bark -p 8080:8080 -v `pwd`/bark-data:/data finab/bark-server
 ```
+请注意 bark-server 默认使用 /data 目录保存数据，请确保 bark-server 有权限读写 /data 目录，或者你可以使用 `-d` 选项指定一个目录
+
 - 手动安装
 
-1. 根据平台下载可执行文件:<br> <a href='https://github.com/Finb/Bark/releases'>https://github.com/Finb/Bark/releases</a><br>
+1. 根据平台下载可执行文件:<br> <a href='https://github.com/Finb/bark-server/releases'>https://github.com/Finb/bark-server/releases</a><br>
 或自己编译<br>
-<a href="https://github.com/Finb/go-tools/blob/master/Bark.go">https://github.com/Finb/go-tools/blob/master/Bark.go</a>
+<a href="https://github.com/Finb/bark-server">https://github.com/Finb/bark-server</a>
 
 2. 运行
 ```
