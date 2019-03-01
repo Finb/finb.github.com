@@ -29,8 +29,6 @@ tags:
 ```
 docker run -dt --name bark -p 8080:8080 -v `pwd`/bark-data:/data finab/bark-server
 ```
-请注意 bark-server 默认使用 /data 目录保存数据，请确保 bark-server 有权限读写 /data 目录，或者你可以使用 `-d` 选项指定一个目录
-
 - 手动安装
 
 1. 根据平台下载可执行文件:<br> <a href='https://github.com/Finb/bark-server/releases'>https://github.com/Finb/bark-server/releases</a><br>
@@ -45,6 +43,7 @@ docker run -dt --name bark -p 8080:8080 -v `pwd`/bark-data:/data finab/bark-serv
 ```
 chmod +x Bark_linux_amd64
 ```
+请注意 bark-server 默认使用 /data 目录保存数据，请确保 bark-server 有权限读写 /data 目录，或者你可以使用 `-d` 选项指定一个目录
 
 ### 使用
 ```
