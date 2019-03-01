@@ -10,17 +10,23 @@ multilingual: false
 tags: 
 ---
 
-#### Bark是啥？
+### Bark是啥？
 
 <a href="https://www.v2ex.com/t/467407">https://www.v2ex.com/t/467407</a>
 
 ### 后端程序更新
 <span style="color:#BF1827;">2019年1月30日之前</span>下载的后端程序，需要在<span style="color:#BF1827;">2019年4月7日</span>之前更新。因苹果推送证书过期将导致<span style="color:#BF1827;">推送失败</span>
 
-#### 隐私保护:
+### 隐私保护:
 如果你的数据特别敏感，请将Bark部署到私人服务器。<br>所有的数据将只在 你的手机、你的服务器、Apple推送服务器之间传输。
 
-#### 部署:
+### 安装:
+
+- Docker
+```
+docker run -dt --name bark -p 8999:8080 finab/bark-server:v1.0.0
+```
+- 手动安装
 
 1. 根据平台下载可执行文件:<br> <a href='https://github.com/Finb/Bark/releases'>https://github.com/Finb/Bark/releases</a><br>
 或自己编译<br>
@@ -28,19 +34,20 @@ tags:
 
 2. 运行
 ```
-./Bark_linux_amd64 -ip=0.0.0.0 -port=80 
+./Bark_linux_amd64 -ip=0.0.0.0 -port=8080
 ```
-你可能需要
+3. 你可能需要
 ```
 chmod +x Bark_linux_amd64
 ```
-3. 测试
-```
-curl http://0.0.0.0/ping
-```
-4. 在APP端填入你的服务器IP或域名
 
-#### 推送证书:
+### 使用
+```
+curl http://0.0.0.0:8080/ping
+```
+Ping成功后，在APP端填入你的服务器IP或域名
+
+### 推送证书:
 
 * 当你需要集成Bark到自己的系统或重新实现后端代码时可能需要推送证书<br>
 证书密码: bp<br>
@@ -48,7 +55,7 @@ curl http://0.0.0.0/ping
 <a href="https://github.com/Finb/Bark/releases/download/1.0.0/cert-20200229.p12">cert-20200229.p12</a>
 * 请及时更新推送证书，证书过期前两个月会在当前页面更新新的有效证书
 
-#### 其他:
+### 其他:
 
 1. APP端负责将<a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622958-application">DeviceToken</a>发送到服务端。 <br>服务端收到一个推送请求后，将发送推送给Apple服务器。然后手机收到推送
 
