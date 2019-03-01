@@ -39,7 +39,7 @@ docker run -dt --name bark -p 8080:8080 -v `pwd`/bark-data:/data finab/bark-serv
 
 2. 运行
 ```
-./Bark_linux_amd64 -ip=0.0.0.0 -port=8080
+./Bark_linux_amd64 -l 0.0.0.0 -p 8080
 ```
 3. 你可能需要
 ```
