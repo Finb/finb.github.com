@@ -29,6 +29,13 @@ tags:
 ```
 docker run -dt --name bark -p 8080:8080 -v `pwd`/bark-data:/data finab/bark-server
 ```
+
+- Docker-Compose 
+```
+mkdir bark && cd bark
+curl -sL https://git.io/fhAsj > docker-compose.yaml
+docker-compose up -d
+```
 - 手动安装
 
 1. 根据平台下载可执行文件:<br> <a href='https://github.com/Finb/bark-server/releases'>https://github.com/Finb/bark-server/releases</a><br>
