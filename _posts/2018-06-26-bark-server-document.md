@@ -15,7 +15,8 @@ tags:
 
 ### Bark是啥？
 
-<a href="https://www.v2ex.com/t/467407">https://www.v2ex.com/t/467407</a>
+<a href="https://www.v2ex.com/t/467407">https://www.v2ex.com/t/467407</a><br>
+[使用教程](https://github.com/Finb/Bark/blob/master/README.md)
 
 ### 后端程序更新
 <span style="color:#BF1827;">2019年1月30日之前</span>下载的后端程序，需要在<span style="color:#BF1827;">2019年4月7日</span>之前更新。因苹果推送证书过期将导致<span style="color:#BF1827;">推送失败</span>
