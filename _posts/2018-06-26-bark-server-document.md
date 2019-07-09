@@ -19,6 +19,11 @@ tags:
 位于北京腾讯云的公共服务器突然不能访问，已紧急切换到位于台湾的备用机器上，境外服务器访问可能不稳定，之后会迁回腾讯云<br>
 如果你需要非常可靠的环境发送推送，建议自行搭建后端。<br>
 
+### 新增公共服务器
+
+https://api.day.app （Google Cloud 台湾）<br>
+https://api2.day.app:4443 （腾讯云北京，如果使用 https://api.day.app 不稳定，可以使用这个）<br>
+
 ### Bark是啥？
 
 <a href="https://www.v2ex.com/t/467407">https://www.v2ex.com/t/467407</a><br>
