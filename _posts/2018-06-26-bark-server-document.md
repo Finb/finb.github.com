@@ -21,8 +21,8 @@ tags:
 
 ### 新增公共服务器
 
-https://api.day.app （Google Cloud 台湾）<br>
-https://api2.day.app:4443 （腾讯云北京，如果使用 https://api.day.app 不稳定，可以使用这个）<br>
+1. https://api.day.app （Google Cloud 台湾）<br>
+2. https://api2.day.app:4443 （腾讯云北京，如果使用 https://api.day.app 不稳定，可以使用这个）<br>
 
 ### Bark是啥？
 
