@@ -16,16 +16,13 @@ tags:
 ### 后端程序更新
 <span style="color:#BF1827;">2019年12月28日之前</span>下载的后端程序，需要在<span style="color:#BF1827;">2020年2月28日</span>之前更新。因苹果推送证书过期将导致<span style="color:#BF1827;">推送失败</span>
 
-### 通知
-
-2019/07/09 服务中止了一段时间 <br>
-位于北京腾讯云的公共服务器突然不能访问，已紧急切换到位于台湾的备用机器上，境外服务器访问可能不稳定，之后会迁回腾讯云<br>
-如果你需要非常可靠的环境发送推送，建议自行搭建后端。<br>
 
 ### 新增公共服务器
 
-1. https://api.day.app （Google Cloud 台湾）<br>
+1. https://api.day.app （阿里云 香港， Google Cloud 台湾已下线）<br>
 2. https://api2.day.app:4443 （腾讯云北京，如果使用 https://api.day.app 不稳定，可以使用这个）<br>
+
+境外服务器访问不稳定，如果你需要非常可靠的环境发送推送，建议自行搭建后端。<br>
 
 ### Bark是啥？
 
@@ -45,7 +42,7 @@ docker run -dt --name bark -p 8080:8080 -v `pwd`/bark-data:/data finab/bark-serv
 - Docker-Compose 
 ```
 mkdir bark && cd bark
-curl -sL https://git.io/fhAsj > docker-compose.yaml
+curl -sL https://git.io/JvSRl > docker-compose.yaml
 docker-compose up -d
 ```
 - 手动安装
