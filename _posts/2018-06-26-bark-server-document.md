@@ -17,20 +17,16 @@ tags:
 <span style="color:#BF1827;">2019年12月28日之前</span>下载的后端程序，需要在<span style="color:#BF1827;">2020年2月28日</span>之前更新。因苹果推送证书过期将导致<span style="color:#BF1827;">推送失败</span>
 
 
-### 新增公共服务器
-
-1. https://api.day.app （阿里云 香港， Google Cloud 台湾已下线）<br>
-2. https://api2.day.app:4443 （腾讯云北京，如果使用 https://api.day.app 不稳定，可以使用这个）<br>
-
-境外服务器访问不稳定，如果你需要非常可靠的环境发送推送，建议自行搭建后端。<br>
-
 ### Bark是啥？
 
 <a href="https://www.v2ex.com/t/467407">https://www.v2ex.com/t/467407</a><br>
 [使用教程](https://github.com/Finb/Bark/blob/master/README.md)
 
 ### 隐私保护:
-如果你的数据特别敏感，请将Bark部署到私人服务器。<br>所有的数据将只在 你的手机、你的服务器、Apple推送服务器之间传输。
+如果你的数据特别敏感，请将Bark部署到私人服务器。<br>所有的数据将只在 你的手机、你的服务器、Apple推送服务器之间传输。  
+历史消息通过 NotificationServiceExtension 扩展，在收到推送时将推送信息保存在本地，不会经过其他任何设备。  
+历史记录仅由个人iCloud私有库进行同步。  
+可以确保你产生的任何通知，将只留在你的设备与你的iCloud中  
 
 ### 安装:
 
