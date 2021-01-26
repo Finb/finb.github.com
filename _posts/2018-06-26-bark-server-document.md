@@ -14,7 +14,7 @@ tags:
 <br/>
 
 ### 后端程序更新
-<span style="color:#BF1827;">2019年12月28日之前</span>下载的后端程序，需要在<span style="color:#BF1827;">2020年2月28日</span>之前更新。因苹果推送证书过期将导致<span style="color:#BF1827;">推送失败</span>
+<span style="color:#BF1827;">2020/12/01日之后</span>发布的版本，推送证书将永久有效，因苹果推送证书过期导致<span style="color:#BF1827;">推送失败</span>的朋友可以更新一下。
 
 
 ### Bark是啥？
