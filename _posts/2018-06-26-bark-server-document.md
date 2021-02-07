@@ -68,7 +68,7 @@ Ping成功后，在APP端填入你的服务器IP或域名
 
 * 当你需要集成Bark到自己的系统或重新实现后端代码时可能需要推送证书<br>
 有效期到: 永久<br>
-KeyID: LH4T9V5U4R <br>
+Key ID: LH4T9V5U4R <br>
 TeamID: 5U8LBRXG3A <br>
 <a href="https://github.com/Finb/bark-server/releases/download/v1.0.2/AuthKey_LH4T9V5U4R_5U8LBRXG3A.p8">AuthKey_LH4T9V5U4R_5U8LBRXG3A.p8</a>
 
