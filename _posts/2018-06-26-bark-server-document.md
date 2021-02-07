@@ -67,10 +67,10 @@ Ping成功后，在APP端填入你的服务器IP或域名
 ### 推送证书:
 
 * 当你需要集成Bark到自己的系统或重新实现后端代码时可能需要推送证书<br>
-证书密码: bp<br>
-有效期到: 2021-01-25<br>
-<a href="https://github.com/Finb/bark-server/releases/download/1.0.0/cert-20210125.p12">cert-20210125.p12</a>
-* 请及时更新推送证书，证书过期前两个月会在当前页面更新新的有效证书
+有效期到: 永久<br>
+KeyID: LH4T9V5U4R
+TeamID: 5U8LBRXG3A
+<a href="https://github.com/Finb/bark-server/releases/download/v1.0.2/AuthKey_LH4T9V5U4R_5U8LBRXG3A.p8">AuthKey_LH4T9V5U4R_5U8LBRXG3A.p8</a>
 
 ### 其他:
 
