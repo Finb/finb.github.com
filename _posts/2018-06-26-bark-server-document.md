@@ -13,7 +13,8 @@ tags:
 <a href="https://github.com/Finb/bark-server/blob/master/README.md">For English</a>
 <br/>
 
-### 后端程序更新
+### 参数 automaticallyCopy 自动复制推送内容 在 iOS14.5 失效，可暂时先下拉推送或在锁屏界面左滑推送点查看，点击复制按钮来复制推送内容。
+
 <span style="color:#BF1827;">2020/12/01日之后</span>发布的版本，推送证书将永久有效，因苹果推送证书过期导致<span style="color:#BF1827;">推送失败</span>的朋友可以更新一下。
 
 
