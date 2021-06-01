@@ -18,6 +18,9 @@ tags:
 9：00 重启程序后，服务恢复正常。 <br>
 如果你使用的是自建后端服务，请重启后端程序即可恢复推送服务<br>
 
+### iOS14.5 不能复制推送的问题
+
+参数 automaticallyCopy 自动复制推送内容功能在 iOS14.5 失效，可暂时先下拉推送或在锁屏界面左滑推送点查看，点击复制按钮来复制推送内容。
 
 
 ### Bark是啥？
@@ -53,13 +56,13 @@ docker-compose up -d
 
 2. 运行
 ```
-./Bark_linux_amd64 -l 0.0.0.0 -p 8080
+./bark-server_linux_amd64 -addr 0.0.0.0:8080 -data ./bark-data
 ```
 3. 你可能需要
 ```
-chmod +x Bark_linux_amd64
+chmod +x bark-server_linux_amd64
 ```
-请注意 bark-server 默认使用 /data 目录保存数据，请确保 bark-server 有权限读写 /data 目录，或者你可以使用 `-d` 选项指定一个目录
+请注意 bark-server 默认使用 /data 目录保存数据，请确保 bark-server 有权限读写 /data 目录，或者你可以使用 `-data` 选项指定一个目录
 
 ### 使用
 ```
@@ -70,16 +73,16 @@ Ping成功后，在APP端填入你的服务器IP或域名
 ### 推送证书:
 
 * 当你需要集成Bark到自己的系统或重新实现后端代码时可能需要推送证书<br>
-证书密码: bp<br>
-有效期到: 2021-01-25<br>
-<a href="https://github.com/Finb/bark-server/releases/download/1.0.0/cert-20210125.p12">cert-20210125.p12</a>
-* 请及时更新推送证书，证书过期前两个月会在当前页面更新新的有效证书
+有效期到: 永久<br>
+Key ID: LH4T9V5U4R <br>
+TeamID: 5U8LBRXG3A <br>
+<a href="https://github.com/Finb/bark-server/releases/download/v1.0.2/AuthKey_LH4T9V5U4R_5U8LBRXG3A.p8">AuthKey_LH4T9V5U4R_5U8LBRXG3A.p8</a>
 
 ### 其他:
 
 1. APP端负责将<a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622958-application">DeviceToken</a>发送到服务端。 <br>服务端收到一个推送请求后，将发送推送给Apple服务器。然后手机收到推送
 
-2. 服务端代码: <a href='https://github.com/Finb/go-tools/blob/master/Bark.go'>https://github.com/Finb/go-tools/blob/master/Bark.go</a><br>
+2. 服务端代码: <a href='https://github.com/Finb/bark-server'>https://github.com/Finb/bark-server</a><br>
 
 3. App代码: <a href="https://github.com/Finb/Bark">https://github.com/Finb/Bark</a>
 
