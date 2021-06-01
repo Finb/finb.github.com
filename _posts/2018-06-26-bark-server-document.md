@@ -13,8 +13,11 @@ tags:
 <a href="https://github.com/Finb/bark-server/blob/master/README.md">For English</a>
 <br/>
 
-### 后端程序更新
-<span style="color:#BF1827;">2019年12月28日之前</span>下载的后端程序，需要在<span style="color:#BF1827;">2020年2月28日</span>之前更新。因苹果推送证书过期将导致<span style="color:#BF1827;">推送失败</span>
+### 公共服务器（api.day.app）6月1服务异常说明
+6月1日凌晨 0：00 - 0：20 ，后端服务程序与APNS通信异常，随即后端程序推送服务被终止。<br>
+9：00 重启程序后，服务恢复正常。 <br>
+如果你使用的是自建后端服务，请重启后端程序即可恢复推送服务<br>
+
 
 
 ### Bark是啥？
