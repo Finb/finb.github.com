@@ -1,50 +1,164 @@
-# Basic
-title: Fin
-subtitle: 笔记
-#welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
-# description:
-creator: <a href="http://onev.cat">@onevcat</a>
+# The Site Configuration
 
-url: "http://day.app"
+# Import the theme
+theme: jekyll-theme-chirpy
 
-permalink: /:year/:month/:title/
+# Only if your site type is GitHub Project sites and doesn't have a custom domain,
+# change below value to '/projectname'.
+baseurl: ''
 
-# Format
-highlighter: rouge
+# the HTML language tag › https://www.w3.org/International/questions/qa-choosing-language-tags
+lang: zh-Hans
 
-# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: slate
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+timezone: Asia/Shanghai
 
-# The blog button should not be removed.
-blog_button:
-    title: 博客
-    description: Visit blog
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# --------------------------
+title: Fin                          # the main title
 
-# Navigation buttons in the front page.
-nav:
-    # - {title: Another Button, description: A button, url: 'http://example.com'}
-    - {title: Bark, description: V2ex-Swift, url: 'https://github.com/Finb/Bark/releases'}
-    - {title: V2ex-Swift, description: V2ex-Swift, url: 'https://github.com/Finb/V2ex-Swift'}
-    
+tagline: 笔记   # it will display as the sub-title
 
-# Pagination
-gems: [jekyll-paginate]
-paginate: 10
-paginate_path: "page/:num/"
+description: >-                        # used by seo meta and the atom feed
+  
 
-# Comment
-comment:
-    disqus: finab
-    # duoshuo: 
-    
-# Social
+# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
+url: 'https://day.app'
+
+github:
+  username: Finb             # change to your github username
+
+twitter:
+  username: finuuid            # change to your twitter username
+
 social:
-    github: Finb
-    twitter: finuuid
-    # gplus: 107108267983477358170
-    mail: heyfiniks@gmail.com
+  # Change to your full name.
+  # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  name: Fin
+  email: to@day.app
+  links:
+    # The first element serves as the copyright owner's link
+    - https://twitter.com/finuuid      # change to your twitter homepage
+    - https://github.com/Finb       # change to your github homepage
+    # Uncomment below to add more social links
+    # - https://www.facebook.com/username
+    # - https://www.linkedin.com/in/username
 
-# Google Analytics
-ga:
-    id: UA-116607515-1
-    host: day.app
+google_site_verification: google_meta_tag_verification # change to your verification string
+# --------------------------
+
+google_analytics:
+  id: 'UA-116607515-1'              # fill in your Google Analytics ID
+  # Google Analytics pageviews report settings
+  pv:
+    proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
+    cache_path:       # the local PV cache data, friendly to visitors from GFW region
+
+# Prefer color scheme setting.
+#
+# Note: Keep empty will follow the system prefer color by default,
+# and there will be a toggle to switch the theme between dark and light
+# on the bottom left of the sidebar.
+#
+# Available options:
+#
+#     light  - Use the light color scheme
+#     dark   - Use the dark color scheme
+#
+theme_mode:   # [light|dark]
+
+# The CDN endpoint for images.
+# Notice that once it is assigned, the CDN url
+# will be added to all image (site avatar & posts' images) paths starting with '/'
+#
+# e.g. 'https://cdn.com'
+img_cdn: ''
+
+# the avatar on sidebar, support local or CORS resources
+avatar: https://day.app/assets/images/avatar.jpg
+
+# boolean type, the global switch for ToC in posts.
+toc: true
+
+disqus:
+  comments: true  # boolean type, the global switch for posts comments.
+  shortname: 'finab'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+
+paginate: 10
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+
+defaults:
+  -
+    scope:
+      path: ''          # An empty string here means all files in the project
+      type: posts
+    values:
+      layout: post
+      comments: true    # Enable comments in posts.
+      toc: true         # Display TOC column in posts.
+      # DO NOT modify the following parameter unless you are confident enough
+      # to update the code of all other post links in this project.
+      permalink: /:year/:month/:title/
+  -
+    scope:
+      path: _drafts
+    values:
+      comments: false
+  -
+    scope:
+      path: ''
+      type: tabs             # see `site.collections`
+    values:
+      layout: page
+      permalink: /:title/
+      dynamic_title: true    # Hide title in mobile screens.
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - '*.gem'
+  - '*.gemspec'
+  - tools
+  - docs
+  - README.md
+  - LICENSE
+  - gulpfile.js
+  - node_modules
+  - '*.json'
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
