@@ -17,7 +17,7 @@ layout: default
           <span class="semi-bold">
             {{ page.author | default: site.social.name }}
           </span>
-          {% include timeago.html date=page.date prep="on" tooltip=true %}
+          {% include timeago.html date=page.date prep="发布于" tooltip=true %}
         </div>
 
         <div>
@@ -25,12 +25,12 @@ layout: default
           {% if page.last_modified_at %}
           <span>
             {% include timeago.html date=page.last_modified_at
-              class="lastmod" prefix="Updated" tooltip=true %}
+              class="lastmod" prefix="最后更新:" tooltip=true %}
           </span>
           {% endif %}
 
           <!-- read time -->
-          {% include read-time.html content=content %}
+          
 
           <!-- page views -->
           {% if site.google_analytics.pv.proxy_endpoint or site.google_analytics.pv.cache_path %}
