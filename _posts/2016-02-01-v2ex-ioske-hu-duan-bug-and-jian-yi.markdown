@@ -8,7 +8,7 @@ categories:
 
 你可以给我写邮件或在当前页面评论处反馈问题、提出建议。  
 邮箱：<to@day.app> 。  
-评论：<a href='#disqus_thread'>评论 (Disqus，需翻墙)</a>
+评论：底部评论 (Disqus，需翻墙)
 
 
 
@@ -21,8 +21,8 @@ categories:
 #### 2. 是否会偷偷上传用户隐私数据
 
 当然是不会的，你可以用你的监控工具监控软件的网络请求。
-软件只会请求 [v2ex.com](v2ex.com)
-与 Twitter旗下的 [crashlytics.com](crashlytics.com)
+软件只会请求 [www.v2ex.com](https://v2ex.com)
+与 Twitter旗下的 [crashlytics.com](https://crashlytics.com)
 并且，你可以[下载源代码](https://github.com/Finb/V2ex-Swift)自行编译使用
 
 #### 3. 为什么没有发帖与搜索
