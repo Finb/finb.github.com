@@ -103,9 +103,8 @@ GEM
     wdm (0.1.1)
     yell (2.2.2)
 PLATFORMS
-  x86_64-darwin-18
   x86_64-linux
-  
+
 DEPENDENCIES
   html-proofer (~> 3.18)
   jekyll-theme-chirpy!
