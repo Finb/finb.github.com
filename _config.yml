@@ -105,6 +105,8 @@ collections:
     sort_by: order
 
 
+permalink: /:year/:month/:title/
+
 defaults:
   -
     scope:
@@ -116,7 +118,11 @@ defaults:
       toc: true         # Display TOC column in posts.
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
-      permalink: /:year/:month/:title/
+      location: Post
+      breadcrumb:
+        -
+          label: 主页
+          url: /
   -
     scope:
       path: _drafts
@@ -130,6 +136,10 @@ defaults:
       layout: page
       permalink: /:title/
       dynamic_title: true    # Hide title in mobile screens.
+      breadcrumb:
+        -
+          label: 主页
+          url: /
 
 sass:
   style: compressed
