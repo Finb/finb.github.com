@@ -8,6 +8,7 @@ _site/
 Gemfile.lock
 package-lock.json
 node_modules/
+.jekyll-cache/
 
 ### OSX ###
 .DS_Store

@@ -5,21 +5,23 @@
 <div id="topbar-wrapper" class="row justify-content-center topbar-down">
   <div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between">
     <span id="breadcrumb">
-      {% for item in page.breadcrumb %}
-        {% if item.url %}
-        <span>
-          <a href="{{ site.baseurl }}{{ item.url | remove: '.html'}}">
-            {{ item.label }}
-          </a>
-        </span>
-        {% else %}
-          <span>{{ item.label }}</span>
-        {% endif %}
-      {% endfor %}
-
-      {% unless page.layout == "home" %}
+      {% if page.layout == 'home' %}
+        {{ "主页" }}
+      {% else %}
+        {% for item in page.breadcrumb %}
+          {% if item.url %}
+          <span>
+            <a href="{{ site.baseurl }}{{ item.url | remove: '.html'}}">
+              {{ item.label }}
+            </a>
+          </span>
+          {% else %}
+            <span>{{ item.label }}</span>
+          {% endif %}
+        {% endfor %}
+  
         <span>{{ page.title }}</span>
-      {% endunless %}
+      {% endif %}
 
     </span><!-- endof #breadcrumb -->
 

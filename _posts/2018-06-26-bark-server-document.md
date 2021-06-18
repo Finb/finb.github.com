@@ -4,10 +4,10 @@ categories:
 title: Bark服务端部署文档
 date: 2018-06-26 16:59:59 +0800
 description: 
-keywords: 
+keywords: Bark
 catalog: true
 multilingual: false
-tags: 
+tags: Bark
 ---
 
 <a href="https://github.com/Finb/bark-server/blob/master/README.md">For English</a>
