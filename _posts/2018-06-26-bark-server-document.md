@@ -13,15 +13,6 @@ tags: Bark
 <a href="https://github.com/Finb/bark-server/blob/master/README.md">For English</a>
 <br/>
 
-### 公共服务器（api.day.app）6月6服务不可用说明
-6月6日18：30分服务器受到攻击，推送服务终止。<br>
-6月6日23：40分推送服务恢复。<ba>
-强烈建议搭建自己的后端服务器来提供稳定的推送服务<br>如遇到自建后端方面的问题，可以发邮件或此页面评论区（需翻墙）找我询问。 <br>
-
-### iOS14.5 不能复制推送的问题
-
-参数 automaticallyCopy 自动复制推送内容功能在 iOS14.5 失效，可暂时先下拉推送或在锁屏界面左滑推送点查看，点击复制按钮来复制推送内容。
-
 
 ### Bark是啥？
 
