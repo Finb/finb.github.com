@@ -55,6 +55,24 @@ chmod +x bark-server_linux_amd64
 ```
 请注意 bark-server 默认使用 /data 目录保存数据，请确保 bark-server 有权限读写 /data 目录，或者你可以使用 `-data` 选项指定一个目录
 
+- Serverless 
+  
+
+  默认提供 Heroku 免费一键部署 <br>
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/finb/bark-server)<br>
+
+  其他支持WEB路由的 serverless 服务器可以使用 `bark-server -serverless true` 开启。
+
+  开启后， bark-server 会读取系统环境变量 BARK_KEY 和 BARK_DEVICE_TOKEN, 需提前设置好。
+
+
+  | 变量名 | 填写要求 |
+  | ---- | ---- |
+  | BARK_KEY | 除了不能填 "push" 外，可以随便填写你喜欢的。|
+  | BARK_DEVICE_TOKEN | Bark App 设置中显示的 DeviceToken，此 Token 是 APNS 真实设备 Token ,请不要泄露 |
+
+  请注意 Serverless 模式只允许一台设备使用
+
 ### 使用
 ```
 curl http://0.0.0.0:8080/ping
