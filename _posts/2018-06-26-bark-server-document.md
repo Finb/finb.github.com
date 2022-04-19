@@ -73,7 +73,6 @@ chmod +x bark-server_linux_amd64
 
   请注意 Serverless 模式只允许一台设备使用
 
-  App Store 的 Bark 版本暂时还不能查看 DeviceToken， 如果你现在要用这个模式部署，需要使用 TestFlight 更新到 1.2.7 (更新后不要回到1.2.6版本)
 
 ### 使用
 ```
