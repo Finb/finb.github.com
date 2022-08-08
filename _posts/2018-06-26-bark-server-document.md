@@ -10,7 +10,7 @@ multilingual: false
 tags: Bark
 ---
 
-<a href="https://github.com/Finb/bark-server/blob/master/README.md">For English</a>
+<a href="https://github.com/Finb/Bark/blob/master/README.en.md">For English</a>
 <br/>
 
 
