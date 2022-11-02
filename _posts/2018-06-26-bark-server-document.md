@@ -79,6 +79,58 @@ curl http://0.0.0.0:8080/ping
 ```
 Ping成功后，在APP端填入你的服务器IP或域名
 
+### 命令行发推送
+直接给设备发推送，无需添加服务器
+
+```sh
+# 设置环境变量
+# 下载key https://raw.githubusercontent.com/Finb/bark-server/master/deploy/AuthKey_LH4T9V5U4R_5U8LBRXG3A.p8 
+# 将key文件路径填到下面
+TOKEN_KEY_FILE_NAME= 
+# 从 app 设置中复制 DeviceToken 到这
+DEVICE_TOKEN=
+
+#下面的不要修改
+TEAM_ID=5U8LBRXG3A
+AUTH_KEY_ID=LH4T9V5U4R
+TOPIC=me.fin.bark
+APNS_HOST_NAME=api.push.apple.com
+
+# 生成TOKEN
+JWT_ISSUE_TIME=$(date +%s)
+JWT_HEADER=$(printf '{ "alg": "ES256", "kid": "%s" }' "${AUTH_KEY_ID}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
+JWT_CLAIMS=$(printf '{ "iss": "%s", "iat": %d }' "${TEAM_ID}" "${JWT_ISSUE_TIME}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
+JWT_HEADER_CLAIMS="${JWT_HEADER}.${JWT_CLAIMS}"
+JWT_SIGNED_HEADER_CLAIMS=$(printf "${JWT_HEADER_CLAIMS}" | openssl dgst -binary -sha256 -sign "${TOKEN_KEY_FILE_NAME}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
+# 如果有条件，最好改进脚本缓存此Token。Token30分钟内复用同一个，每过30分钟重新生成
+# 苹果文档指明 TOKEN生成间隔最短20分钟，TOKEN有效期最长60分钟
+# 间隔过短重复生成会生成失败，TOKEN超过1小时不生成就不能推送
+# 但经我不负责任的简单测试可以短时间内正常生成
+# 此处仅提醒，或许可能因频繁生成TOKEN导致推送失败
+AUTHENTICATION_TOKEN="${JWT_HEADER}.${JWT_CLAIMS}.${JWT_SIGNED_HEADER_CLAIMS}"
+
+#发送推送
+curl -v --header "apns-topic: $TOPIC" --header "apns-push-type: alert" --header "authorization: bearer $AUTHENTICATION_TOKEN" --data '{"aps":{"alert":"test"}}' --http2 https://${APNS_HOST_NAME}/3/device/${DEVICE_TOKEN}
+
+# 推送参数格式可以参考
+# https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification
+# 一定要带上 "mutable-content" : 1 ，否则推送扩展不执行，不会保存推送。
+# 示例：
+{
+    "aps": {
+        "mutable-content": 1,
+        "alert": {
+            "title" : "title",
+            "body": "body"
+        },
+        "category": "myNotificationCategory",
+        "sound": "1107"
+    },
+    "icon": "https://day.app/assets/images/avatar.jpg"
+}
+
+```
+
 ### 推送证书:
 
 * 当你需要集成Bark到自己的系统或重新实现后端代码时可能需要推送证书<br>
