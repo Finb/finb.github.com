@@ -73,7 +73,14 @@ chmod +x bark-server_linux_amd64
 
   请注意 Serverless 模式只允许一台设备使用
 
-- 命令行发推送
+### 使用
+```
+curl http://0.0.0.0:8080/ping
+```
+Ping成功后，在APP端填入你的服务器IP或域名
+
+### 命令行发推送
+直接给设备发推送，无需添加服务器
 
 ```sh
 # 设置环境变量
@@ -114,12 +121,6 @@ curl -v --header "apns-topic: $TOPIC" --header "apns-push-type: alert" --header 
 }
 
 ```
-
-### 使用
-```
-curl http://0.0.0.0:8080/ping
-```
-Ping成功后，在APP端填入你的服务器IP或域名
 
 ### 推送证书:
 
