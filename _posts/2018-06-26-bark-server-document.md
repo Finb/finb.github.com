@@ -124,7 +124,7 @@ curl -v --header "apns-topic: $TOPIC" --header "apns-push-type: alert" --header 
             "body": "body"
         },
         "category": "myNotificationCategory",
-        "sound": "1107"
+        "sound": "minuet.caf"
     },
     "icon": "https://day.app/assets/images/avatar.jpg"
 }
