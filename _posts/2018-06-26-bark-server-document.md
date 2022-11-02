@@ -102,11 +102,11 @@ JWT_HEADER=$(printf '{ "alg": "ES256", "kid": "%s" }' "${AUTH_KEY_ID}" | openssl
 JWT_CLAIMS=$(printf '{ "iss": "%s", "iat": %d }' "${TEAM_ID}" "${JWT_ISSUE_TIME}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
 JWT_HEADER_CLAIMS="${JWT_HEADER}.${JWT_CLAIMS}"
 JWT_SIGNED_HEADER_CLAIMS=$(printf "${JWT_HEADER_CLAIMS}" | openssl dgst -binary -sha256 -sign "${TOKEN_KEY_FILE_NAME}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
-# 如果有条件，最好改进脚本缓存此Token。Token30分钟内复用同一个，每过30分钟重新生成
-# 苹果文档指明 TOKEN生成间隔最短20分钟，TOKEN有效期最长60分钟
-# 间隔过短重复生成会生成失败，TOKEN超过1小时不生成就不能推送
+# 如果有条件，最好改进脚本缓存此 Token。Token 30分钟内复用同一个，每过30分钟重新生成
+# 苹果文档指明 TOKEN 生成间隔最短20分钟，TOKEN 有效期最长60分钟
+# 间隔过短重复生成会生成失败，TOKEN 超过1小时不生成就不能推送
 # 但经我不负责任的简单测试可以短时间内正常生成
-# 此处仅提醒，或许可能因频繁生成TOKEN导致推送失败
+# 此处仅提醒，或许可能因频繁生成 TOKEN 导致推送失败
 AUTHENTICATION_TOKEN="${JWT_HEADER}.${JWT_CLAIMS}.${JWT_SIGNED_HEADER_CLAIMS}"
 
 #发送推送
