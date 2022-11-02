@@ -58,7 +58,7 @@ chmod +x bark-server_linux_amd64
 - Serverless 
   
 
-  默认提供 Heroku 免费一键部署 <br>
+  默认提供 Heroku ~~免费~~ 一键部署 (2022-11-28日后收费)<br>
   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/finb/bark-server)<br>
 
   其他支持WEB路由的 serverless 服务器可以使用 `bark-server -serverless true` 开启。
@@ -73,6 +73,47 @@ chmod +x bark-server_linux_amd64
 
   请注意 Serverless 模式只允许一台设备使用
 
+- 命令行发推送
+
+```sh
+# 设置环境变量
+# 下载key https://raw.githubusercontent.com/Finb/bark-server/master/deploy/AuthKey_LH4T9V5U4R_5U8LBRXG3A.p8 
+# 将key文件路径填到下面
+TOKEN_KEY_FILE_NAME= 
+# 从 app 设置中复制 DeviceToken 到这
+DEVICE_TOKEN=
+
+#下面的不要修改
+TEAM_ID=5U8LBRXG3A
+AUTH_KEY_ID=LH4T9V5U4R
+TOPIC=me.fin.bark
+APNS_HOST_NAME=api.push.apple.com
+JWT_ISSUE_TIME=$(date +%s)
+JWT_HEADER=$(printf '{ "alg": "ES256", "kid": "%s" }' "${AUTH_KEY_ID}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
+JWT_CLAIMS=$(printf '{ "iss": "%s", "iat": %d }' "${TEAM_ID}" "${JWT_ISSUE_TIME}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
+JWT_HEADER_CLAIMS="${JWT_HEADER}.${JWT_CLAIMS}"
+JWT_SIGNED_HEADER_CLAIMS=$(printf "${JWT_HEADER_CLAIMS}" | openssl dgst -binary -sha256 -sign "${TOKEN_KEY_FILE_NAME}" | openssl base64 -e -A | tr -- '+/' '-_' | tr -d =)
+AUTHENTICATION_TOKEN="${JWT_HEADER}.${JWT_CLAIMS}.${JWT_SIGNED_HEADER_CLAIMS}"
+
+#发送推送
+curl -v --header "apns-topic: $TOPIC" --header "apns-push-type: alert" --header "authorization: bearer $AUTHENTICATION_TOKEN" --data '{"aps":{"alert":"test"}}' --http2 https://${APNS_HOST_NAME}/3/device/${DEVICE_TOKEN}
+
+# 推送参数格式可以参考
+# https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification
+# 一定要带上 "mutable-content" : 1 ，否则推送扩展不执行，不会保存推送。
+# 示例：
+{
+   "aps" : {
+      "alert" : {
+         "title" : "title",
+         "subtitle" : "subtitle",
+         "body" : "body"
+      },
+      "mutable-content" : 1
+   }
+}
+
+```
 
 ### 使用
 ```
