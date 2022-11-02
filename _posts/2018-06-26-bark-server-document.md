@@ -84,8 +84,8 @@ Ping成功后，在APP端填入你的服务器IP或域名
 
 ```sh
 # 设置环境变量
-# 下载key https://raw.githubusercontent.com/Finb/bark-server/master/deploy/AuthKey_LH4T9V5U4R_5U8LBRXG3A.p8 
-# 将key文件路径填到下面
+# 下载 key https://raw.githubusercontent.com/Finb/bark-server/master/deploy/AuthKey_LH4T9V5U4R_5U8LBRXG3A.p8 
+# 将 key 文件路径填到下面
 TOKEN_KEY_FILE_NAME= 
 # 从 app 设置中复制 DeviceToken 到这
 DEVICE_TOKEN=
